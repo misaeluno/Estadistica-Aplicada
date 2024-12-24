@@ -1,0 +1,34 @@
+# Definir el rango de x
+x <- 1:10
+
+# Simular u como una variable aleatoria normal con media 0 y desviación estándar 1
+# set.seed(123) # Para reproducibilidad
+u <- rnorm(length(x), 0, 1)
+
+# Calcular Y
+Y <- 1 + 2 * x + u
+
+# Graficar los pares ordenados (x, Y) con puntos azules
+plot(x, Y, main = "Regresión Lineal Simple", xlab = "x", ylab = "Y", pch = 19, col = "blue", lwd=4)
+
+# Añadir la línea de la regresión y = 1 + 2x
+abline(1, 2, lwd = 3, col = "red")
+
+# Calcular los coeficientes de la regresión
+beta1 <- cov(x, Y) / var(x)
+beta0 <- mean(Y) - beta1 * mean(x)
+
+# Añadir la línea de regresión calculada
+abline(beta0, beta1, lwd = 3, col="blue")
+
+# Calcular los valores esperados y residuos
+y.gorro <- beta0 + beta1 * x
+residuo <- y.gorro - (1 + 2 * x)
+
+# Calcular el error cuadrático medio
+error_cuadratico_medio <- sum(residuo^2) / (length(residuo)-2)
+
+# Mostrar resultados
+print(paste("Beta0:", beta0))
+print(paste("Beta1:", beta1))
+print(paste("Error cuadrático medio:", error_cuadratico_medio))

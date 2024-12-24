@@ -1,0 +1,42 @@
+# Configuración de los parámetros
+set.seed(123)  # Para reproducibilidad
+n_muestras <- 100
+n <- 20
+nivel_confianza <- 0.95
+alfa <- 1 - nivel_confianza
+
+# Generación de las medias muestrales y los intervalos de confianza
+medias <- numeric(n_muestras)
+lim_inf <- numeric(n_muestras)
+lim_sup <- numeric(n_muestras)
+
+for (i in 1:n_muestras) {
+  muestra <- rnorm(n)  # Muestra de tamaño n de una normal estándar
+  medias[i] <- mean(muestra)
+  error_estandar <- sd(muestra) / sqrt(n)
+  
+  # Intervalo de confianza para la media
+  lim_inf[i] <- medias[i] - qnorm(1 - alfa / 2) * error_estandar
+  lim_sup[i] <- medias[i] + qnorm(1 - alfa / 2) * error_estandar
+}
+
+# Configurar el diseño de los gráficos en dos paneles
+par(mfrow = c(1, 2))
+
+# Gráfico del histograma de las medias
+hist(medias, main = "Medias", col = "lightblue", xlab = "Medias", ylab = "Frecuencias")
+
+# Gráfico de los intervalos de confianza
+plot(c(min(lim_inf), max(lim_sup)), c(1, n_muestras), type = "n", xlab = "", ylab = "", main = "Intervalos")
+abline(v = 0, col = "blue", lwd=3)  # Línea vertical en 0
+
+for (i in 1:n_muestras) {
+  if (lim_inf[i] <= 0 && lim_sup[i] >= 0) {
+    # Intervalo que contiene 0 (verde)
+    segments(lim_inf[i], i, lim_sup[i], i, col = "green", lwd=3)
+  } else {
+    # Intervalo que no contiene 0 (rojo)
+    segments(lim_inf[i], i, lim_sup[i], i, col = "red", lwd=3)
+  }
+}
+
