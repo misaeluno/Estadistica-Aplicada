@@ -1,0 +1,10 @@
+1.- The jamovi project (2021). jamovi (Version 1.6) [Computer Software]. https://www.jamovi.org.
+2. Tutoriales para jamovi: https://www.jamovi.org/community.html
+3. Módulos disponibles en jamovi: https://www.jamovi.org/library.html
+4. Navarro DJ and Foxcroft DR (2022). learning statistics with jamovi: a tutorial for psychology students and other beginners. (Version 0.75). DOI: 10.24384/hgc3-7p15 https://www.learnstatswithjamovi.com/
+
+link de descarga
+https://www.jamovi.org/download.html?authuser=1
+
+video de como instalar
+https://www.youtube.com/watch?v=5cPt5Rj8xJA&authuser=1

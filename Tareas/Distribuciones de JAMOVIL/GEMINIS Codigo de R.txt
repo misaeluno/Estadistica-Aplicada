@@ -1,0 +1,101 @@
+Gemini
+
+¡Absolutamente! Aquí tienes los códigos en R para generar números aleatorios de las distribuciones de probabilidad que mencionaste, junto con una breve explicación de cada función:
+Fragmento de código
+
+# 1. Bernoulli
+# Genera un número aleatorio que toma el valor 1 con probabilidad p y 0 con probabilidad 1-p
+p <- 0.3  # Probabilidad de éxito
+numero_aleatorio <- rbinom(n = 1, size = 1, prob = p)
+print(numero_aleatorio)
+
+# 2. Binomial
+# Genera n números aleatorios que siguen una distribución binomial con tamaño n y probabilidad p
+n <- 10
+p <- 0.5
+numeros_aleatorios <- rbinom(n = n, size = n, prob = p)
+print(numeros_aleatorios)
+
+# 3. Poisson
+# Genera n números aleatorios que siguen una distribución de Poisson con tasa lambda
+lambda <- 3
+numeros_aleatorios <- rpois(n = n, lambda = lambda)
+print(numeros_aleatorios)
+
+# 4. Binomial negativa
+# Genera n números aleatorios que siguen una distribución binomial negativa con tamaño size y probabilidad prob
+size <- 3
+prob <- 0.2
+numeros_aleatorios <- rnbinom(n = n, size = size, prob = prob)
+print(numeros_aleatorios)
+
+# 5. Uniforme
+# Genera n números aleatorios que siguen una distribución uniforme entre min y max
+min <- 0
+max <- 1
+numeros_aleatorios <- runif(n = n, min = min, max = max)
+print(numeros_aleatorios)
+
+# 6. Exponencial
+# Genera n números aleatorios que siguen una distribución exponencial con tasa rate
+rate <- 2
+numeros_aleatorios <- rexp(n = n, rate = rate)
+print(numeros_aleatorios)
+
+# 7. Beta
+# Genera n números aleatorios que siguen una distribución beta con parámetros shape1 y shape2
+shape1 <- 2
+shape2 <- 3
+numeros_aleatorios <- rbeta(n = n, shape1 = shape1, shape2 = shape2)
+print(numeros_aleatorios)
+
+# 8. Weibull
+# Genera n números aleatorios que siguen una distribución de Weibull con parámetros shape y scale
+shape <- 2
+scale <- 1
+numeros_aleatorios <- rweibull(n = n, shape = shape, scale = scale)
+print(numeros_aleatorios)
+
+# 9. Normal
+# Genera n números aleatorios que siguen una distribución normal con media mean y desviación estándar sd
+mean <- 5
+sd <- 2
+numeros_aleatorios <- rnorm(n = n, mean = mean, sd = sd)
+print(numeros_aleatorios)
+
+Usa el código con precaución.
+
+Explicación de las funciones:
+
+    rbinom: Genera números aleatorios de una distribución binomial.
+    rpois: Genera números aleatorios de una distribución de Poisson.
+    rnbinom: Genera números aleatorios de una distribución binomial negativa.
+    runif: Genera números aleatorios de una distribución uniforme.
+    rexp: Genera números aleatorios de una distribución exponencial.
+    rbeta: Genera números aleatorios de una distribución beta.
+    rweibull: Genera números aleatorios de una distribución de Weibull.
+    rnorm: Genera números aleatorios de una distribución normal.
+
+Cómo usar estos códigos:
+
+    Instala R: Si aún no lo tienes, descarga e instala R desde https://www.r-project.org/.
+    Abre R o RStudio: Abre tu entorno de desarrollo de R.
+    Copia y pega el código: Copia el código de la distribución que te interesa y pégalo en la consola de R.
+    Modifica los parámetros: Cambia los valores de n, p, lambda, size, prob, min, max, shape, scale, mean y sd según tus necesidades.
+    Ejecuta el código: Presiona Enter para ejecutar el código y obtener los números aleatorios generados.
+
+Ejemplo:
+Si quieres generar 100 números aleatorios que sigan una distribución normal con media 0 y desviación estándar 1, simplemente cambia los valores de n, mean y sd en el código correspondiente a la distribución normal:
+Fragmento de código
+
+n <- 100
+mean <- 0
+sd <- 1
+numeros_aleatorios <- rnorm(n = n, mean = mean, sd = sd)
+print(numeros_aleatorios)
+
+Usa el código con precaución.
+
+¡Con estos códigos podrás generar fácilmente números aleatorios de diferentes distribuciones de probabilidad en R!
+
+¿Necesitas más ayuda o tienes alguna otra pregunta?

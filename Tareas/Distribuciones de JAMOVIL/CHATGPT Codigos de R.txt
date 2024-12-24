@@ -1,0 +1,112 @@
+CHATGPT
+¡Claro! Aquí tienes el código en R para generar números aleatorios de las distribuciones de probabilidad que mencionaste:
+1. Distribución Bernoulli
+
+La distribución Bernoulli tiene dos posibles resultados: 0 y 1. La probabilidad de obtener 1 se define por el parámetro p.
+
+# Parámetro p: probabilidad de éxito
+p <- 0.5
+# Generar 10 números aleatorios de una distribución Bernoulli
+rbern <- rbinom(10, 1, p)
+print(rbern)
+
+2. Distribución Binomial
+
+La distribución binomial describe el número de éxitos en una secuencia de experimentos de Bernoulli independientes. Necesita dos parámetros: el número de ensayos n y la probabilidad de éxito p.
+
+# Parámetros n (número de ensayos) y p (probabilidad de éxito)
+n <- 10
+p <- 0.5
+# Generar 10 números aleatorios de una distribución Binomial
+rbinom <- rbinom(10, n, p)
+print(rbinom)
+
+3. Distribución Poisson
+
+La distribución de Poisson describe la cantidad de eventos que ocurrirán en un intervalo de tiempo fijo, dado un promedio de ocurrencias lambda.
+
+# Parámetro lambda: tasa de ocurrencia
+lambda <- 3
+# Generar 10 números aleatorios de una distribución Poisson
+rpois <- rpois(10, lambda)
+print(rpois)
+
+4. Distribución Binomial Negativa
+
+La distribución binomial negativa describe el número de ensayos necesarios hasta obtener un número fijo de éxitos. Los parámetros son size (número de éxitos) y prob (probabilidad de éxito en cada ensayo).
+
+# Parámetros size (número de éxitos) y prob (probabilidad de éxito)
+size <- 5
+prob <- 0.5
+# Generar 10 números aleatorios de una distribución Binomial Negativa
+rnbinom <- rnbinom(10, size, prob)
+print(rnbinom)
+
+5. Distribución Uniforme
+
+La distribución uniforme genera números aleatorios dentro de un rango especificado. Los parámetros son min y max, que definen el intervalo de la distribución.
+
+# Parámetros min y max
+min <- 0
+max <- 1
+# Generar 10 números aleatorios de una distribución Uniforme
+runif <- runif(10, min, max)
+print(runif)
+
+6. Distribución Exponencial
+
+La distribución exponencial describe el tiempo entre eventos en un proceso de Poisson. El parámetro es la tasa rate (inversa de la media).
+
+# Parámetro rate: tasa (inversa de la media)
+rate <- 1
+# Generar 10 números aleatorios de una distribución Exponencial
+rexp <- rexp(10, rate)
+print(rexp)
+
+7. Distribución Beta
+
+La distribución Beta es una distribución continua definida en el intervalo [0, 1]. Los parámetros son shape1 y shape2.
+
+# Parámetros shape1 y shape2
+shape1 <- 2
+shape2 <- 5
+# Generar 10 números aleatorios de una distribución Beta
+rbeta <- rbeta(10, shape1, shape2)
+print(rbeta)
+
+8. Distribución Weibull
+
+La distribución Weibull tiene dos parámetros: shape y scale. Se usa en la modelización de tiempos de vida y fallos.
+
+# Parámetros shape y scale
+shape <- 2
+scale <- 1
+# Generar 10 números aleatorios de una distribución Weibull
+rweibull <- rweibull(10, shape, scale)
+print(rweibull)
+
+9. Distribución Normal
+
+La distribución normal tiene dos parámetros: mean (media) y sd (desviación estándar).
+
+# Parámetros mean y sd
+mean <- 0
+sd <- 1
+# Generar 10 números aleatorios de una distribución Normal
+rnorm <- rnorm(10, mean, sd)
+print(rnorm)
+
+Resumen de funciones utilizadas:
+
+    rbinom() para binomial y Bernoulli
+    rpois() para Poisson
+    rnbinom() para binomial negativa
+    runif() para uniforme
+    rexp() para exponencial
+    rbeta() para Beta
+    rweibull() para Weibull
+    rnorm() para normal
+
+Cada función está diseñada para generar números aleatorios de la distribución correspondiente, y puedes modificar los parámetros según lo que necesites.
+
+¡Espero que esto te sea útil! Si necesitas más detalles o alguna explicación adicional, ¡no dudes en preguntar!
